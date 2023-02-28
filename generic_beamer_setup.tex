@@ -1,0 +1,34 @@
+\input{\SETUPDIR/generic_setup.tex}
+
+\usepackage[style=numeric, 
+            backend=biber,
+            giveninits=true]{biblatex}
+
+\addbibresource{\BIBTEXDIR/biblio.bib}
+
+
+\DeclareFieldFormat{beamercolorauthor}{%
+  \usebeamercolor[fg]{bibliography entry author}%
+  #1}
+\DeclareFieldFormat{beamercolortitle}{%
+  \usebeamercolor[fg]{bibliography entry title}%
+  #1}
+\DeclareFieldFormat{beamercolornote}{%
+  \usebeamercolor[fg]{bibliography entry note}%
+  #1}
+
+\DeclareCiteCommand{\fullcite}
+  {\usebibmacro{prenote}}
+  {\printtext[beamercolorauthor]{%
+     \printnames[given-family]{labelname}%
+     \setunit{\addcomma\space}}%
+   \printtext[beamercolornote]{%
+     \printfield{journaltitle}%
+     \printfield{booktitle}%
+     \setunit{\addspace}%
+     \printtext[parens]{%
+       \printdate}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+  \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}}

@@ -1,0 +1,132 @@
+% Packages
+\usepackage{amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% \usepackage{todonotes}
+\usepackage[export]{adjustbox}
+\usepackage{cases}
+\usepackage{empheq}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage{bigdelim}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage[short]{optidef}
+\usepackage{multirow}
+\usepackage{bookmark}
+\usepackage{comment}
+
+% Referencing
+\newcommand{\secref}[1]{Sec.~\ref{#1}}
+% \newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\remref}[1]{Remark~\ref{#1}}
+\newcommand{\theoref}[1]{Thm~\ref{#1}}
+% \newcommand{\theoref}[1]{Theorem~\ref{#1}}
+\newcommand{\propref}[1]{Prop.~\ref{#1}}
+% \newcommand{\propref}[1]{Proposition~\ref{#1}}
+\newcommand{\claimref}[1]{Claim~\ref{#1}}
+\renewcommand{\eqref}[1]{(\ref{#1})}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\lineref}[1]{Line~\ref{#1}}
+\newcommand{\algoref}[1]{Algorithm~\ref{#1}}
+\newcommand{\exampleref}[1]{Example~\ref{#1}}
+\newcommand{\assumptionsref}[1]{Assumption~\ref{#1}}
+\newcommand{\ocpref}[1]{\ac{ocp}~\eqref{#1}}
+\newcommand{\corref}[1]{Corollary~\ref{#1}}
+
+% Roman labels (pure nostalgia)
+\newcommand{\romanlabel}{\textup{(\textit{\roman*})}}
+
+%\newenvironment{claim}[1]{\par\noindent Claim:\space#1}{}
+%\newenvironment{claimproof}[1]{\par\noindent Proof:\space#1}{\hfill $\blacksquare$}
+\newcommand{\myqed}{\hfill~\qed}
+\newenvironment{proofidea}{\noindent\textit{Proof Idea:}}{\myqed}
+
+%%%%%%% Math stuff %%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Rp}{\R_{\geq 0}}
+\newcommand{\Rpp}{\R_{> 0}}
+\newcommand{\sign}{\mathrm{sgn}}
+\newcommand{\conv}{\mathrm{conv}}
+\newcommand{\diam}{\mathrm{diam}}
+
+% min max math operators
+\DeclareMathOperator*{\minimize}{\mathrm{minimize}}
+\DeclareMathOperator*{\maximize}{\mathrm{maximize}}
+\DeclareMathOperator*{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+
+
+%% 1e-10
+\newcommand{\expnumber}[2]{{#1}\mathrm{e}{#2}}
+
+%% If and only if
+\newcommand{\ifproof}{``$\Rightarrow$''}
+\newcommand{\onlyifproof}{``$\Leftarrow$''}
+
+% Adapted equations 
+\newcommand{\myeq}[1]{\stackrel{#1}{=}}
+\newcommand{\defeq}{\vcentcolon=}
+
+% Machine precision
+\newcommand{\epsmach}{\varepsilon_{\textrm{mach}}}
+
+% For all math roman
+\newcommand{\ift}{\mathrm{~if~}}
+\newcommand{\ifft}{\mathrm{~iff~}}
+\newcommand{\othert}{\mathrm{~otherwise}}
+\newcommand{\elset}{\mathrm{~else}}
+\newcommand{\andt}{\mathrm{~and~}}
+\newcommand{\ort}{\mathrm{~or~}}
+\newcommand{\fa}{\mathrm{~for~all~}}
+\newcommand{\fort}{\mathrm{~for~}}
+\newcommand{\aeot}{\mathrm{~almost~everywhere~on~}}
+\newcommand{\faet}{\mathrm{~for~almost~every~}}
+\newcommand{\fet}{\mathrm{~for~every~}}
+\newcommand{\fat}{\mathrm{~for~all~}}
+\newcommand{\witht}{\mathrm{~with~}}
+
+% Mean and Variance
+\newcommand{\mean}{\mathrm{mean}}
+\newcommand{\var}{\mathrm{var}}
+
+% neat set definition
+\newcommand{\Set}[2]{\{\, #1 \mid #2 \,\}}
+
+% quotation
+\newcommand{\quot}[1]{``{#1}''}
+
+%% Up greek
+\usepackage{upgreek}
+% \renewcommand{\tau}{\uptau}
+
+%% Algorithm
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\renewcommand{\listalgorithmcfname}{List of Algorithms}%
+\renewcommand{\algorithmcfname}{Algorithm}%
+\renewcommand{\algorithmautorefname}{algorithm}%
+\renewcommand{\algorithmcflinename}{line}%
+
+%% special right arrow
+\newcommand{\myrightarrow}[1]{\xrightarrow{\makebox[2em][c]{$\scriptstyle#1$}}}
+
+%% Volume
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\trace}{\mathrm{tr}}
+
+%% Integration
+\newcommand{\dt}{\textup{d}t}

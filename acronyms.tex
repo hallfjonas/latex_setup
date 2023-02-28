@@ -1,0 +1,35 @@
+
+\usepackage[acronym,hyperfirst=false]{glossaries}
+
+%% Acronyms using glossaries package
+% Acronyms with plural forms
+\newacronym[plural=LCQPs,firstplural=Linear Complementarity Quadratic Programs (LCQP)]{lcqp}{LCQP}{Linear Complementarity Quadratic Program}
+\newacronym[plural=MPCCs,firstplural=Mathematical Programs with Complemenetarity Constraints (MPCC)]{mpcc}{MPCC}{Mathematical Program with Complemenetarity Constraints}
+\newacronym[plural=QPs,firstplural=Quadratic Programs (QP)]{qp}{QP}{Quadratic Program}
+\newacronym[plural=QCQPs,firstplural=Quadratically Constrained Quadratic Programs (QPQP)]{qcqp}{QCQP}{Quadratically Constrained Quadratic Program}
+\newacronym[plural=NLPs,firstplural=Nonlinear Programs (NLP)]{nlp}{NLP}{Nonlinear Program}
+\newacronym[plural=OCPs,firstplural=Optimal Control Problems (OCP)]{ocp}{OCP}{Optimal Control Problem}
+\newacronym[plural=MIQPs,firstplural=Mixed Integer Quadratic Programs (MIQP)]{miqp}{MIQP}{Mixed Integer Quadratic Program}
+\newacronym[plural=MINLPs,firstplural=Mixed Integer Non-Linear Programs (MINLP)]{minlp}{MINLP}{Mixed Integer Non-Linear Program}
+\newacronym[plural=QPCCs,firstplural=Quadratic Programs with Complementarity Constraints (QPCC)]{qpcc}{QPCC}{Quadratic Program with Complementarity Constraints}
+\newacronym[plural=QPLCCs,firstplural=Quadratic Programs with Linear Compementarity Constraints (QPLCC)]{qplcc}{QPLCC}{Quadratic Program with Linear Compementarity Constraints}
+\newacronym[plural=FDIs,firstplural=Filippov Differential Inclusions (FDI)]{fdi}{FDI}{Filippov Differential Inclusion}
+\newacronym[plural=ODEs,firstplural=Ordinary Differential Equations (ODE)]{ode}{ODE}{Ordinary Differential Equation}
+\newacronym[plural=TSPs,firstplural=Traveling Salesperson Problems (TSP)]{tsp}{TSP}{Traveling Salesperson Problem}
+
+% Acronyms without plural forms
+\newacronym{sqp}{SQP}{Sequential Quadratic Programming}
+\newacronym{scp}{SCP}{Sequential Convex Programming}
+\newacronym{licq}{LICQ}{Linear Independence Constraint Qualification}
+\newacronym{mfcq}{MFCQ}{Mangasarian-Fromovitz Constraint Qualification}
+\newacronym{kkt}{KKT}{Karush-Kuhn-Tucker}
+\newacronym{pm}{PM}{Persistent Monitoring}
+\newacronym{pmp}{PMP}{Pontryagin Minimum Principle}
+\newacronym{lls}{LLS}{Linear Least Squares}
+\newacronym{ipa}{IPA}{Infinitesimal Perturbation Analysis}
+\newacronym{ad}{AD}{Automatic Differentiation}
+\newacronym{mpc}{MPC}{Model Predictive Control}
+
+% Because I previously used the acronym package
+\newcommand{\ac}[1]{\gls*{#1}}
+\newcommand{\acp}[1]{\glspl*{#1}}

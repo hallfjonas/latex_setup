@@ -1,0 +1,108 @@
+% Modified packages
+ %\usepackage[letterpaper, total={6in, 8in}]{geometry}
+ \usepackage{todonotes}
+
+ \usepackage{bbm}
+
+% Mathcal for spaces and sets
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\C}{\mathcal{C}}
+\def\Z{\mathcal{Z}}
+\def\N{\mathcal{N}}
+
+% Dots and such
+\newcommand{\dalpha}{\dot{s}}
+\newcommand{\dR}{\dot{R}}
+
+% Example for acronym plural
+% \newacroplural{qp}[QPs]{Quadratic Programs}
+
+% Some specific expression
+\newcommand{\tagent}{\tilde{\agent}}
+\newcommand{\ttarget}{\tilde{\target}}
+\newcommand{\tu}{\tilde{u}}
+\newcommand{\tcost}{\tilde{\cost}}
+\newcommand{\tdelta}{\tilde{\delta}}
+\newcommand{\tDelta}{\tilde{\Delta}}
+\newcommand{\fpid}{f^{\mathrm{pid}}}
+\newcommand{\dxi}{\dot{\xi}}
+\newcommand{\tf}{\tilde{f}}
+\newcommand{\tx}{\tilde{x}}
+\newcommand{\dgamma}{\dot{\gamma}}
+% For nicer looking tables (use ra in your tables to increase the space between rows 1.3 should be fine)
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%
+%% Variable names %%
+%%%%%%%%%%%%%%%%%%%%
+% Basic setup
+\newcommand{\target}{\vartheta}
+\newcommand{\agent}{s}
+\newcommand{\internal}{\phi}
+\newcommand{\cost}{c}
+
+% convention \dvarname = \dot{\varname}
+\newcommand{\dtarget}{\dot{\target}}
+\newcommand{\dagent}{\dot{\agent}}
+\newcommand{\dinternal}{\dot{\internal}}
+\newcommand{\dcost}{\dot{\cost}}
+
+% Indices
+\renewcommand{\i}{i}        % target index
+\renewcommand{\j}{j}        % agent index    
+\renewcommand{\k}{k}        % time index
+\renewcommand{\l}{\ell}     % parameter period index
+
+% Parametrizations
+\newcommand{\switchpos}{\psi}
+\newcommand{\trackinter}{\phi}
+\newcommand{\trackcomb}{\alpha}
+\newcommand{\Kp}{K_p}
+\newcommand{\Ki}{K_i}
+\newcommand{\error}{e}
+
+% IPA
+\newcommand{\eventtime}{\tau}
+\newcommand{\param}{\theta}
+\newcommand{\allparams}{\mathbf{\theta}}
+
+% Optimization 
+\newcommand{\steplength}{\rho}
+\newcommand{\stepdirection}{p}
+
+\usepackage{subcaption}
+% \usepackage[caption=false]{subfig} 
+
+\newcounter{inlineenum}
+\renewcommand{\theinlineenum}{\alph{inlineenum}}
+\newenvironment{inlineenum}
+  {\unskip\ignorespaces\setcounter{inlineenum}{0}%
+   \renewcommand{\item}{\refstepcounter{inlineenum}{\textit{\theinlineenum})~}}}
+  {\ignorespacesafterend}
+
+\definecolor{agentcolor}{HTML}{326da8}
+\definecolor{targetcolor}{HTML}{c84646}
+\newcommand{\sensingopacity}{0.15}
+\newcommand{\dimmedopacity}{0.8}
+
+\newcommand{\mindist}{\Delta^\mathrm{min}}
+
+% Specify a figure width to hopefully fit everything onto 8 pages
+\newcommand{\figwidth}{\columnwidth}
+
+\newcommand{\todocolor}[1]{{\textcolor{red}{#1}}}
+
+\newenvironment{proofsketch}{%
+  \renewcommand{\proofname}{Proof sketch}\proof}{\endproof}
