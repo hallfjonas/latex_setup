@@ -2,7 +2,7 @@
 
 \usepackage[style=numeric, 
             backend=biber,
-            giveninits=true]{biblatex}
+            giveninits=true]{biblatex}%
 
 \addbibresource{\BIBTEXDIR/biblio.bib}
 
@@ -31,4 +31,11 @@
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
-  \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}}
+  \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}%
+}%
+
+% Change alert to bold
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor{alerted text}{fg=black}
+
+\setbeamertemplate{frametitle}{\centering\color{black}{\large\insertframetitle}\par\vskip-6pt{\color{black}\hrulefill}}
