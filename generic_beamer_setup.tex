@@ -5,7 +5,7 @@
             giveninits=true]{biblatex}%
 
 \addbibresource{\BIBTEXDIR/biblio.bib}
-
+\input{\SETUPDIR/theorems_beamer.tex}
 
 \DeclareFieldFormat{beamercolorauthor}{%
   \usebeamercolor[fg]{bibliography entry author}%
@@ -38,4 +38,6 @@
 \setbeamerfont{alerted text}{series=\bfseries}
 \setbeamercolor{alerted text}{fg=black}
 
+% Changing beamer templates
 \setbeamertemplate{frametitle}{\centering\color{black}{\large\insertframetitle}\par\vskip-6pt{\color{black}\hrulefill}}
+\setbeamertemplate{blocks}[rounded][shadow=true] % use rounded blocks with standard beamer shadow
