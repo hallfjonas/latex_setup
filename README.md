@@ -1,2 +1,2 @@
-# latex_setup
-My personal bibliography file. When writing a paper use this as a submodule. Update changes!
+# LaTeX Setup
+Various collections of packages, commands and environments.
