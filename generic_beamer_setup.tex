@@ -31,6 +31,23 @@
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
+  \DeclareCiteCommand{\fullfullcite}
+  {\usebibmacro{prenote}}
+  {\printtext[beamercolorauthor]{%
+  \printnames[given-family]{labelname}%
+  \setunit{\addcomma\space}}%
+  \printtext[beamercolortitle]{%
+  \printfield{title}%
+  \setunit{\addcomma\space}}%
+  \printtext[beamercolornote]{%
+  \printfield{journaltitle}%
+  \printfield{booktitle}%
+  \setunit{\addspace}%
+  \printtext[parens]{%
+  \printdate}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
   \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}%
 }%
 
