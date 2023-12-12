@@ -63,3 +63,17 @@
 \definecolor{bured}{rgb}{0.81, 0.24, 0.16}
 \definecolor{bugreen}{rgb}{0.16, 0.66, 0.16}
 \definecolor{buyellow}{rgb}{0.9, 0.7, 0.1}
+
+% Define a transparent making overlay
+\usepackage{transparent}
+\newcommand<>{\hide}[1]{%
+  \alt#2{\transparent{0.4}{#1}}{#1}%
+}
+\newcommand<>{\unhide}[1]{%
+  \alt#2{#1}{\transparent{0.4}{#1}}%
+}
+
+% Define a mathbfalert
+\newcommand<>{\mathbfalert}[1]{%
+  \alt#2{\mathbf{#1}}{#1}%
+}
