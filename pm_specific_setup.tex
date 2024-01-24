@@ -52,6 +52,16 @@
 \newcommand{\agent}{s}
 \newcommand{\internal}{\phi}
 \newcommand{\cost}{c}
+\newcommand{\targetpos}{p}
+
+% errors, measurements, etc 
+\newcommand{\measurement}{z}
+\newcommand{\estimate}{\hat{\internal}}
+\newcommand{\estimatecov}{\Omega}
+\newcommand{\internalvar}{Q}
+\newcommand{\monitoringfun}{\gamma}
+\newcommand{\localmonitoringfun}{\mathring{\monitoringfun}}
+\newcommand{\measurevar}{R}
 
 % convention \dvarname = \dot{\varname}
 \newcommand{\dtarget}{\dot{\target}}
@@ -64,6 +74,12 @@
 \renewcommand{\j}{j}        % agent index    
 \renewcommand{\k}{k}        % time index
 \renewcommand{\l}{\ell}     % parameter period index
+
+% Decomposition
+\newcommand{\entrance}{\agent\super{\varphi}}
+\newcommand{\departure}{\agent\super{\psi}}
+\newcommand{\localT}{\tau}
+\newcommand{\absenceT}{\tau\super{\mathrm{c}}}
 
 % Parameterizations
 \newcommand{\switchpos}{\psi}
