@@ -2,10 +2,10 @@
 
 \usepackage[style=numeric, 
             backend=biber,
-            giveninits=true]{biblatex}
+            giveninits=true]{biblatex}%
 
 \addbibresource{\BIBTEXDIR/biblio.bib}
-
+\input{\SETUPDIR/theorems_beamer.tex}
 
 \DeclareFieldFormat{beamercolorauthor}{%
   \usebeamercolor[fg]{bibliography entry author}%
@@ -31,4 +31,49 @@
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
-  \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}}
+  \DeclareCiteCommand{\fullfullcite}
+  {\usebibmacro{prenote}}
+  {\printtext[beamercolorauthor]{%
+  \printnames[given-family]{labelname}%
+  \setunit{\addcomma\space}}%
+  \printtext[beamercolortitle]{%
+  \printfield{title}%
+  \setunit{\addcomma\space}}%
+  \printtext[beamercolornote]{%
+  \printfield{journaltitle}%
+  \printfield{booktitle}%
+  \setunit{\addspace}%
+  \printtext[parens]{%
+  \printdate}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+  \newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\fullcite{‌​#2}}%
+}%
+
+% Change alert to bold
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor{alerted text}{fg=black}
+
+% Changing beamer templates
+\setbeamertemplate{frametitle}{\centering\color{black}{\large\insertframetitle}\par\vskip-6pt{\color{black}\hrulefill}}
+\setbeamertemplate{blocks}[rounded][shadow=true] % use rounded blocks with standard beamer shadow
+
+% Change color scheme to match BU
+\definecolor{bured}{rgb}{0.81, 0.24, 0.16}
+\definecolor{bugreen}{rgb}{0.16, 0.66, 0.16}
+\definecolor{buyellow}{rgb}{0.9, 0.7, 0.1}
+
+% Define a transparent making overlay
+\usepackage{transparent}
+\newcommand<>{\hide}[1]{%
+  \alt#2{\transparent{0.4}{#1}}{#1}%
+}
+\newcommand<>{\unhide}[1]{%
+  \alt#2{#1}{\transparent{0.4}{#1}}%
+}
+
+% Define a mathbfalert
+\newcommand<>{\mathbfalert}[1]{%
+  \alt#2{\mathbf{#1}}{#1}%
+}

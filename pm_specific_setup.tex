@@ -53,6 +53,16 @@
 \newcommand{\agent}{s}
 \newcommand{\internal}{\phi}
 \newcommand{\cost}{c}
+\newcommand{\targetpos}{p}
+
+% errors, measurements, etc 
+\newcommand{\measurement}{z}
+\newcommand{\estimate}{\hat{\internal}}
+\newcommand{\estimatecov}{\Omega}
+\newcommand{\internalvar}{Q}
+\newcommand{\monitoringfun}{\gamma}
+\newcommand{\localmonitoringfun}{\mathring{\monitoringfun}}
+\newcommand{\measurevar}{R}
 
 % convention \dvarname = \dot{\varname}
 \newcommand{\dtarget}{\dot{\target}}
@@ -66,7 +76,13 @@
 \renewcommand{\k}{k}        % time index
 \renewcommand{\l}{\ell}     % parameter period index
 
-% Parametrizations
+% Decomposition
+\newcommand{\entrance}{\agent\super{\varphi}}
+\newcommand{\departure}{\agent\super{\psi}}
+\newcommand{\localT}{\tau}
+\newcommand{\absenceT}{\tau\super{\mathrm{c}}}
+
+% Parameterizations
 \newcommand{\switchpos}{\psi}
 \newcommand{\trackinter}{\phi}
 \newcommand{\trackcomb}{\alpha}
@@ -107,7 +123,3 @@
 
 \newenvironment{proofsketch}{%
   \renewcommand{\proofname}{Proof sketch}\proof}{\endproof}
-
-% Define an non-enumerated "Task" environment
-\usepackage{ntheorem}
-\newtheorem*{task*}{Task}
