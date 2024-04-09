@@ -1,6 +1,6 @@
 % Modified packages
- %\usepackage[letterpaper, total={6in, 8in}]{geometry}
- \usepackage{todonotes}
+%\usepackage[letterpaper, total={6in, 8in}]{geometry}
+%\usepackage{todonotes}
 
  \usepackage{bbm}
 
@@ -49,10 +49,11 @@
 %%%%%%%%%%%%%%%%%%%%
 % Basic setup
 \newcommand{\target}{\vartheta}
-\newcommand{\agent}{s}
+\newcommand{\agent}{a}
 \newcommand{\internal}{\phi}
 \newcommand{\cost}{c}
 \newcommand{\targetpos}{p}
+\newcommand{\targetindexset}{\T}
 
 % errors, measurements, etc 
 \newcommand{\measurement}{z}
@@ -62,6 +63,10 @@
 \newcommand{\monitoringfun}{\gamma}
 \newcommand{\localmonitoringfun}{\mathring{\monitoringfun}}
 \newcommand{\measurevar}{R}
+\newcommand{\partition}{S}
+\newcommand{\partitioninterior}{\stackrel{\circ}{\partition}}
+\newcommand{\npartition}{P}
+\newcommand{\partitionfunction}{g}
 
 % convention \dvarname = \dot{\varname}
 \newcommand{\dtarget}{\dot{\target}}
@@ -80,6 +85,14 @@
 \newcommand{\departure}{\agent\super{\psi}}
 \newcommand{\localT}{\tau}
 \newcommand{\absenceT}{\tau\super{\mathrm{c}}}
+\newcommand{\integrationCT}{I^\ast}
+\newcommand{\monitoringCT}{J^\ast}
+\newcommand{\minswitchT}{\delta}
+\newcommand{\absenceCost}{\alpha}
+\newcommand{\monitoringcontrol}{u^{\mathrm{m}}}
+\newcommand{\switchingcontrol}{u^{\mathrm{s}}}
+\newcommand{\support}{K}
+\newcommand{\interior}[1]{\stackrel{\circ}{#1}}
 
 % Parameterizations
 \newcommand{\switchpos}{\psi}
