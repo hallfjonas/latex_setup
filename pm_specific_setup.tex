@@ -134,4 +134,9 @@
 \newcommand{\todocolor}[1]{{\textcolor{red}{#1}}}
 
 \newenvironment{proofsketch}{%
-  \renewcommand{\proofname}{Proof sketch}\proof}{\endproof}
+  \renewcommand{\proofname}{Proof sketch}\proof
+}{%
+  \endproof
+}
+
+\newcommand{\TSP}[1]{\text{TSP}(#1)}
