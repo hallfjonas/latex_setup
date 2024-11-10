@@ -11,13 +11,13 @@
 \newcommand{\M}{\mathcal{M}}
 \newcommand{\T}{\mathcal{T}}
 \newcommand{\A}{\mathcal{A}}
-\newcommand{\U}{\mathcal{U}}
 \newcommand{\X}{\mathcal{X}}
 \newcommand{\F}{\mathcal{F}}
-\newcommand{\G}{\mathcal{G}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\Y}{\mathcal{Y}}
-\newcommand{\C}{\mathcal{C}}
+\def\U{\mathcal{U}}
+\def\G{\mathcal{G}}
+\def\C{\mathcal{C}}
 \def\Z{\mathcal{Z}}
 \def\N{\mathcal{N}}
 
@@ -53,9 +53,11 @@
 \newcommand{\control}{u}
 \newcommand{\controlbound}{b}
 \newcommand{\internal}{\phi}
-\newcommand{\cost}{c}
+\newcommand{\uncertainty}{\zeta}
+\newcommand{\cost}{L}
 \newcommand{\targetpos}{p}
 \newcommand{\targetindexset}{\T}
+\newcommand{\pathconstraints}{h}
 
 % errors, measurements, etc 
 \newcommand{\measurement}{z}
@@ -70,11 +72,17 @@
 \newcommand{\npartition}{P}
 \newcommand{\partitionfunction}{g}
 
+% Dynamics
+\newcommand{\f}{f}
+\newcommand{\fagent}{\f_{\agent}}
+\newcommand{\funcertainty}{\f_{\uncertainty}}
+
 % convention \dvarname = \dot{\varname}
-\newcommand{\dtarget}{\dot{\target}}
 \newcommand{\dagent}{\dot{\agent}}
+\newcommand{\dtarget}{\dot{\target}}
 \newcommand{\dinternal}{\dot{\internal}}
 \newcommand{\dcost}{\dot{\cost}}
+\newcommand{\duncertainty}{\dot{\uncertainty}}
 
 % Indices
 \renewcommand{\i}{i}        % target index
