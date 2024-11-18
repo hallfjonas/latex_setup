@@ -76,6 +76,7 @@
 \newcommand{\f}{f}
 \newcommand{\fagent}{\f_{\agent}}
 \newcommand{\funcertainty}{\f_{\uncertainty}}
+\newcommand{\funcertaintyi}{\f_{\uncertainty_i}}
 
 % convention \dvarname = \dot{\varname}
 \newcommand{\dagent}{\dot{\agent}}
@@ -91,14 +92,16 @@
 \renewcommand{\l}{\ell}     % parameter period index
 
 % Decomposition
+\newcommand{\parameters}{\Theta}
+\newcommand{\Parameters}{\theta}
 \newcommand{\entrancesymb}{\varphi}
 \newcommand{\departuresymb}{\psi}
 \newcommand{\entrance}{\agent\super{\entrancesymb}}
 \newcommand{\departure}{\agent\super{\psi}}
 \newcommand{\localT}{\tau}
 \newcommand{\absenceT}{\tau\super{\mathrm{c}}}
-\newcommand{\integrationCT}{I^\ast}
-\newcommand{\monitoringCT}{J^\ast}
+\newcommand{\switchingCT}{I^s}
+\newcommand{\monitoringCT}{I^m}
 \newcommand{\minswitchT}{\delta}
 \newcommand{\absenceCost}{\alpha}
 \newcommand{\monitoringcontrol}{u^{\mathrm{m}}}
@@ -108,6 +111,7 @@
 \newcommand{\lambdaT}{\lambda^\localT}
 \newcommand{\lambdaEntrance}{\lambda^\entrancesymb}
 \newcommand{\lambdaDeparture}{\lambda^\departuresymb}
+
 
 % Parameterizations
 \newcommand{\switchpos}{\psi}
@@ -141,7 +145,7 @@
 \newcommand{\sensingopacity}{0.15}
 \newcommand{\dimmedopacity}{0.8}
 
-\newcommand{\mindist}{\Delta^\mathrm{min}}
+\newcommand{\switchtime}{\Delta}
 
 % Specify a figure width to hopefully fit everything onto 8 pages
 \newcommand{\figwidth}{\columnwidth}
