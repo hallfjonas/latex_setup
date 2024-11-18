@@ -1,5 +1,6 @@
 % Packages
-\usepackage{amssymb,amsfonts}
+\usepackage{amssymb}
+\usepackage{amsfonts}
 \usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{textcomp}
@@ -90,6 +91,13 @@
 %% Up greek
 \usepackage{upgreek}
 % \renewcommand{\tau}{\uptau}
+
+%% Algorithm
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\renewcommand{\listalgorithmcfname}{List of Algorithms}%
+\renewcommand{\algorithmcfname}{Algorithm}%
+\renewcommand{\algorithmautorefname}{algorithm}%
+\renewcommand{\algorithmcflinename}{line}%
 
 %% special right arrow
 \newcommand{\myrightarrow}[1]{\xrightarrow{\makebox[2em][c]{$\scriptstyle#1$}}}
