@@ -82,6 +82,8 @@
 \newcommand{\fagent}{\f_{\agent}}
 \newcommand{\funcertainty}{\f_{\uncertainty}}
 \newcommand{\funcertaintyi}{\f_{\uncertainty_i}}
+\newcommand{\funcertaintyimon}{\f_{\uncertainty_i}^m}
+\newcommand{\funcertaintyiunmon}{\f_{\uncertainty_i}^u}
 
 % convention \dvarname = \dot{\varname}
 \newcommand{\dagent}{\dot{\agent}}
@@ -101,6 +103,8 @@
 \newcommand{\Parameters}{\theta}
 \newcommand{\entrancesymb}{\varphi}
 \newcommand{\departuresymb}{\psi}
+\newcommand{\entranceuncertainty}{\uncertainty^\entrancesymb}
+\newcommand{\departureuncertainty}{\uncertainty^\departuresymb}
 \newcommand{\entrance}{\agent\super{\entrancesymb}}
 \newcommand{\departure}{\agent\super{\psi}}
 \newcommand{\localT}{\tau}
@@ -116,7 +120,8 @@
 \newcommand{\lambdaT}{\lambda^\localT}
 \newcommand{\lambdaEntrance}{\lambda^\entrancesymb}
 \newcommand{\lambdaDeparture}{\lambda^\departuresymb}
-\newcommand{\localTimeConstraint}{h}
+\newcommand{\localTimeConstraint}{h_k}
+\newcommand{\localRegionConstraint}{g_k}
 
 
 % Parameterizations
